@@ -84,8 +84,7 @@ export default function Page() {
   };
   const getListContact = async () => {
     try {
-      // const res = await contactApi.getListContact(store.userId);
-      const res = await contactApi.getListContact(1);
+      const res = await contactApi.getListContact(store.userId);
       setContacts(res.contacts);
     } catch (error) {}
   };
@@ -411,11 +410,10 @@ export default function Page() {
                 disableColumnFilter
                 disableColumnMenu
                 onRowClick={async ({ id }) => {
-                  // const res = await contactApi.getContact(
-                  //   store.userId,
-                  //   id as any
-                  // );
-                  const res = await contactApi.getContact(1, id as any);
+                  const res = await contactApi.getContact(
+                    store.userId,
+                    id as any
+                  );
                   let ResContact: Contact = res.contact;
                   if (ResContact.REQUISITES) {
                     for (let i = 0; i < ResContact.REQUISITES!.length; i++) {
