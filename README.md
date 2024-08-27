@@ -1,6 +1,15 @@
 ## Getting Started
 
-First, install the dependencies:
+First, copy bitrix24 domain and client id into next.config.mjs file:
+
+```bash
+env: {
+    BITRIX24_DOMAIN: {BITRIX24_DOMAIN},
+    APP_ID: {CLIENT_ID},
+}
+```
+
+Second, install the dependencies:
 
 ```bash
 npm install
@@ -8,7 +17,7 @@ npm install
 yarn
 ```
 
-Next, run the development server:
+Next, run the client:
 
 ```bash
 npm run dev
@@ -16,4 +25,6 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the client.
+
+Finally, use server url from ngrok to install app.
